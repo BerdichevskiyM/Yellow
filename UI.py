@@ -3,7 +3,7 @@ from PyQt5.QtCore import QRect
 from PyQt5.QtGui import QFont
 
 
-class Ui:
+class UIClass:
     @staticmethod
     def init_ui(app):
         app.resize(698, 500)

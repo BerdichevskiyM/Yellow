@@ -2,13 +2,13 @@ import random
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.QtGui import QPainter, QColor
-import UI
+from UI import UIClass
 
 
 class Application(QWidget):
     def __init__(self):
         super().__init__()
-        UI.Ui.init_ui(self)
+        UIClass.init_ui(self)
         self.start = False
         self.pushButton.clicked.connect(self.generate)
 
