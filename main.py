@@ -25,7 +25,6 @@ class Application(QWidget):
                 d = random.randrange(100)
                 self.qp.drawEllipse(random.randrange(100, 598), random.randrange(100, 400), d, d)
             self.qp.end()
-            self.start = False
 
 
 if __name__ == '__main__':
