@@ -10,6 +10,7 @@ class Application(QWidget):
         super().__init__()
         UIClass.init_ui(self)
         self.start = False
+        self.qp = QPainter()
         self.pushButton.clicked.connect(self.generate)
 
     def generate(self):
@@ -18,10 +19,9 @@ class Application(QWidget):
 
     def paintEvent(self, event):
         if self.start:
-            self.qp = QPainter()
             self.qp.begin(self)
-            self.qp.setBrush(QColor(255, 255, 0))
             for i in range(5):
+                self.qp.setBrush(QColor(*[random.randrange(255) for _ in range(3)]))
                 d = random.randrange(100)
                 self.qp.drawEllipse(random.randrange(100, 598), random.randrange(100, 400), d, d)
             self.qp.end()
